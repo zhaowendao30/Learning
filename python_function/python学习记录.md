@@ -1,0 +1,140 @@
+#### 关于字符串的一些操作:cat:
+
+##### 1.记录字符串中各字母出现的次数(collections模块的使用):+1:
+
+```python
+input
+s = 'dvasasd'
+t = 'afafsda'
+s_n = collections.Counter(s)
+print('s_n = ',s_n)
+t_n = collections.Counter(t)
+print('t_n = ',t_n)
+
+output
+s_n =  Counter({'d': 2, 'a': 2, 's': 2, 'v': 1})
+t_n =  Counter({'a': 3, 'f': 2, 's': 1, 'd': 1})
+```
+
+
+
+
+
+##### 2.~~python3~~关于字符串的一些方法:happy:
+
+
+
+| 函数          | 含义                                                      |
+| :------------ | --------------------------------------------------------- |
+| str.isalnum() | 所有字符都是数字或者字母，为真返回 Ture，否则返回 False。 |
+| str.isalpha() | 所有字符都是字母，为真返回 Ture，否则返回 False。str      |
+| str.isdigit() | 所有字符都是数字，为真返回 Ture，否则返回 False。         |
+| str.islower() | 所有字符都是小写，为真返回 Ture，否则返回 False。         |
+| str.isupper() | 所有字符都是大写，为真返回 Ture，否则返回 False。         |
+| str.istitle() | 所有单词都是首字母大写，为真返回 Ture，否则返回 False。   |
+| str.isspace() | 所有字符都是空白字符，为真返回 Ture，否则返回 False       |
+| str.rstrip()  | 删除字符串右端空白                                        |
+| str.lstrip()  | 删除字符串左端空白                                        |
+| str.strip()   | 删除两端空白                                              |
+|               |                                                           |
+
+
+
+#### 关于字典的一些操作:pig:
+
+##### 1.字典排序:+1:
+
+关于sorted函数的介绍: 
+
+sorted(iterable,key,reverse), sorted一共有iterable，key，reverse三个参数。
+
+其中iterable表示可以迭代的对象，例如可以是dict.keys(),	dict.values(),	dict.items()
+
+其中dict.items()表示将字典对应的值与键保存在一个元组中，并输出列表
+
+```python
+input
+dict = {'h': 1, 'e': 1, 'l': 3, 'o': 2, 'w': 1, 'r': 1, 'd': 1}
+print(dict.items())
+
+output
+dict_items([('h', 1), ('e', 1), ('l', 3), ('o', 2), ('w', 1), ('r', 1), ('d', 1)])
+```
+
+key是一个函数，用来选取参与比较的元素，reverse则是用来指定排序是倒序（升序）还是顺序（降序），默认为False（顺序），reverse = True为倒序
+
+
+
+1.1 sorted函数对字典中的值，键排序
+
+```python
+input
+dict = {'h': 1, 'e': 1, 'l': 3, 'o': 2, 'w': 1, 'r': 1, 'd': 1}
+print(sorted(dict))
+print(sorted(dict.keys()))
+print(sorted(dict.values()))
+
+output
+['d', 'e', 'h', 'l', 'o', 'r', 'w']
+['d', 'e', 'h', 'l', 'o', 'r', 'w']
+[1, 1, 1, 1, 1, 2, 3]
+```
+
+1.2 sorted函数按字典中的值对字典进行排序
+
+```python
+input
+dict = {'h': 1, 'e': 1, 'l': 3, 'o': 2, 'w': 1, 'r': 1, 'd': 1}
+res = sorted(dict.items(), key = lambda item: item[1], reverse = True)
+print(res)
+
+output
+[('l', 3), ('o', 2), ('h', 1), ('e', 1), ('w', 1), ('r', 1), ('d', 1)]
+
+```
+
+如果是item[0]则是按字典中的键对字典进行排序
+
+##### 2.字典中pop()和popitem()方法
+
+1.pop(key, [default])
+
+其中key为必选参数，为字典的键，default为可选参数，默认为相应键的值
+
+```python
+input
+dict = {'a': 1, 'b': 2, 'c': 3}
+
+```
+
+
+
+
+
+
+
+
+#### python中os模块与sys模块
+
+* os: 这个模块提供了一种方便的使用操作系统函数的方法
+* sys: 这个模块提供了访问由解释器使用或维护的变量和与解释器进行交互的函数。
+
+* os模块负责程序与操作系统的交互，提供了访问操作系统底层的接口
+* sys模块负责程序与python解释器的交互，提供了一系列的函数和变量，用于操控python的运行时环境。
+
+* os.path操作的是文件在系统的路径
+* os.path操作的是文件在解释器中的搜索路径
+
+
+
+
+
+
+
+
+
+
+
+
+
+
