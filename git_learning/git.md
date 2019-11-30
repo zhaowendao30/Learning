@@ -55,6 +55,9 @@ git commit -m 'remove'
 # 关联github远程库
 git remote add origin git@github.com:zhaowendao30/tensorflow.git
 
+# 解除关联的远程库
+git remote rm <name>
+
 # 将本地库中的所有内容推送到远程库上
 git push -u origin master
 
